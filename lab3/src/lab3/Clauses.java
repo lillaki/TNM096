@@ -7,8 +7,8 @@ public class Clauses{
 	public Vector<String> positive = new Vector<String>();
 	
 	public Clauses() {
-		negative.add(""); 
-		positive.add(""); 
+		negative.add("");
+		positive.add("");
 		
 	}
 	
