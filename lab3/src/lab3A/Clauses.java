@@ -92,10 +92,40 @@ public class Clauses{
 			if(C.isEmpty()) {
 				return null;
 			}
+			printClause(C);
 			return C;
 		}
 	
+	// Write a print function to print the result with 'V' 
+	public static void printClause(Clauses C) {
+		/*
+		for(int i = 0; i < C.negative.size(); i++ ) {
+			System.out.println("C negative: " + C.negative.get(i));
+		}
+		for(int i = 0; i < C.positive.size(); i++ ) {
+			System.out.println("C positive: " + C.positive.get(i));
+		}*/
+		
+		Vector<String> printString = new Vector<String>();
+		
+		printString.addAll(C.negative);
+		printString.addAll(C.positive);
+		
+		for(int i = 0; i < printString.size(); i++) {
+			
+			if(!printString.get(i).equals("")) {
+				
+				if(!(i + 1 == printString.size())) {
+					System.out.print(printString.get(i) + "V");
+				}
+				else System.out.print(printString.get(i));
+			}
+		}
+		
+		
 
+	}
+	
 	public void removeDuplicates(){
 
 		for (int i = 0; i < negative.size(); i++) {
